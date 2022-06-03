@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 10px solid #393;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB,#EFF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.kirby{
+    position: absolute;
+    bottom: 0;
+    width: 100px;   
+}
+
+.jump{
+    animation: kirby-jump 500ms;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes kirby-jump {
+    0%{
+        bottom: 0;
+    }
+
+    30%{
+        bottom: 200px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+    
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
