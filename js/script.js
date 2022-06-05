@@ -1,5 +1,7 @@
 const kirby = document.querySelector('.kirby');
 const pipe = document.querySelector('.pipe');
+const screen = window.screen;
+screen.orientation.lock('landscape');
 const jump =() =>{
     kirby.classList.add('jump');
     setTimeout(()=>{
@@ -10,7 +12,7 @@ const jump =() =>{
 const loopGame = setInterval(()=>{
     const pipePosition = pipe.offsetLeft;
     const kirbyPosition = +window.getComputedStyle(kirby).bottom.replace('px','');
-
+    console.log(screen);
     if(pipePosition <= 100 && pipePosition > 0 && kirbyPosition <= 100){
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
