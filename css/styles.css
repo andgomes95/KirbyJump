@@ -28,7 +28,7 @@
 }
 
 .jump{
-    animation: kirby-jump 500ms;
+    animation: kirby-jump 1s;
 }
 
 .clouds{
@@ -71,3 +71,8 @@
         right: 100%;
     }
 }
+@media only screen and (orientation:portrait){
+    body {
+      transform: rotate(90deg);
+    }
+  }
