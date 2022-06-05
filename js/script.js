@@ -23,4 +23,5 @@ const loopGame = setInterval(()=>{
     }
 },10);
 
-document.addEventListener('keydown', jump)
+document.addEventListener('keydown', jump);
+document.addEventListener('touchstart',jump);
